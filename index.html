@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluador de Locales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Evaluador de Viabilidad de Locales</h1>
+    </header>
+    <main>
+        <form id="localForm">
+            <h2>Ingresar Datos del Local</h2>
+            <label for="nombre">Nombre del Local:</label>
+            <input type="text" id="nombre" required>
+            
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" id="ubicacion" required>
+            
+            <label for="tamano">Tamaño (m²):</label>
+            <input type="number" id="tamano" required>
+            
+            <label for="costo">Costo Alquiler Mensual (USD):</label>
+            <input type="number" id="costo" required>
+            
+            <label for="flujo">Personas/Semana:</label>
+            <input type="number" id="flujo" required>
+            
+            <label for="empleados">Cantidad de Empleados:</label>
+            <input type="number" id="empleados" required>
+            
+            <label for="sueldo">Sueldo Promedio por Empleado (USD):</label>
+            <input type="number" id="sueldo" required>
+            
+            <label for="porcentajeIngresantes">% Ingresantes al Local:</label>
+            <input type="number" id="porcentajeIngresantes" placeholder="Porcentaje (%)" required>
+            
+            <label for="inversionInicial">Inversión Inicial (USD):</label>
+            <input type="number" id="inversionInicial" placeholder="Ejemplo: 5000" required>
+        
+            <button type="submit">Agregar Local</button>
+        </form>
+        
+        <section id="resultados">
+            <h2>Locales Registrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Ubicación</th>
+                        <th>Tamaño</th>
+                        <th>Costo Alquiler Mensual</th>
+                        <th>Personas/Semana</th>
+                        <th>% Posible Cliente</th>
+                        <th>Clientes Estimados</th>
+                        <th>Sueldos Total</th>
+                        <th>Costo Total Inversión</th>
+                        <th>Inversión Inicial</th>
+                        <th>Puntaje</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaLocales"></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
